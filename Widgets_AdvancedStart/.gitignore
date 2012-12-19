@@ -1,0 +1,7 @@
+Logs/
+DataFolder/
+Backups/
+SymbolTable.Match
+SymbolTable.waSym
+SymbolTable.waSymData
+Permissions.waPerm

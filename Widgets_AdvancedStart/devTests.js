@@ -1,0 +1,1 @@
+﻿//clear all data//loginByPassword('admin','admin');//ds.Company.remove();//ds.Person.remove();//generate new data//WidgetExplorer.initUser();
