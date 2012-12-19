@@ -9,7 +9,9 @@ WAF.onAfterInit = function onAfterInit() {// @lock
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		$$('component1').loadComponent('components/03_UserData.waComponent');
+		//Growth Fund ID is 981FE804061D234398EFFEEBD9C7D072
+		
+		$$('component1').loadComponent('/components/03_UserData.waComponent');
 	};// @lock
 
 // @region eventManager// @startlock
