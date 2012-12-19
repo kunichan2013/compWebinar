@@ -10,7 +10,7 @@ function constructor (id) {
 	this.name = '05_CustomFunction2';
 	// @endregion// @endlock
 	this.myFunction = function(){
-		alert('this is a completely different function');
+		alert('Do something completely different with the same interface page call');
 	}
 	
 	this.load = function (data) {// @lock
