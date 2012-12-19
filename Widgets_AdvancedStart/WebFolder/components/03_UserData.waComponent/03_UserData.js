@@ -14,7 +14,9 @@ function constructor (id) {
 
 	// @region namespaceDeclaration// @startlock
 	// @endregion// @endlock
-
+	var myFunction = data.userData.doSomething;
+	
+	myFunction();
 	// eventHandlers// @lock
 
 	// @region eventManager// @startlock

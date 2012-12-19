@@ -2,6 +2,7 @@
 (function Component (id) {// @lock
 
 // Add the code that needs to be shared between components here
+var sharedVar = "test";
 
 function constructor (id) {
 
@@ -10,6 +11,9 @@ function constructor (id) {
 	this.name = '04_SharedCode';
 	// @endregion// @endlock
 	
+	this.setSharedVar = function(value){
+		sharedVar = value;
+	}
 	
 	this.load = function (data) {// @lock
 
@@ -21,7 +25,7 @@ function constructor (id) {
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		// Add your code here
+		alert(sharedVar);
 	};// @lock
 
 	// @region eventManager// @startlock

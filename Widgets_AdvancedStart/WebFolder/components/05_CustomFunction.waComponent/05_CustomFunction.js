@@ -9,7 +9,10 @@ function constructor (id) {
 	var $comp = this;
 	this.name = '05_CustomFunction';
 	// @endregion// @endlock
-
+	this.myFunction = function(value){
+		alert('The value is: ' + value);
+	}
+	
 	this.load = function (data) {// @lock
 
 	// @region namespaceDeclaration// @startlock
@@ -20,7 +23,7 @@ function constructor (id) {
 
 	button1.click = function button1_click (event)// @startlock
 	{// @endlock
-		// Add your code here
+		$comp.myFunction();
 	};// @lock
 
 	// @region eventManager// @startlock

@@ -15,7 +15,7 @@ function constructor (id) {
 	// @region namespaceDeclaration// @startlock
 	var companyEvent = {};	// @dataSource
 	// @endregion// @endlock
-
+	
 	// eventHandlers// @lock
 
 	companyEvent.onBeforeCurrentElementChange = function companyEvent_onBeforeCurrentElementChange (event)// @startlock
