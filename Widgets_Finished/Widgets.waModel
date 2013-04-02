@@ -1,82 +1,273 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
-
-<dbInfo name="Widgets" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
-
-<dataClasses name="Company" className="Company" collectionName="Companies" scope="public" uuid="2ACA226F4D084D778B0B175C0932CC68" tablePos="4">
-
-	<extraProperties ____objectunic="true" panelColor="#D88CFF">
-
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
-
-			<position ____objectunic="true" X="48" Y="29"/>
-</panel>
-</extraProperties>
-
-	<attributes name="ID" kind="storage" scope="public" uuid="75CB1845A8454BC5B6803FE7E3505FD2" fieldPos="1" unique="true" autosequence="true" autogenerate="true" type="uuid" primKey="true"/>
-
-	<attributes name="name" kind="storage" scope="public" uuid="1FEAC29990D54949A34586E5F6835A28" fieldPos="2" type="string"/>
-
-	<attributes name="address" kind="storage" scope="public" uuid="37840A2B680A463CBF3AD83493D0514B" fieldPos="3" type="string"/>
-
-	<attributes name="city" kind="storage" scope="public" uuid="4B2CC5394BF544FAAF5EB5CD13053B7A" fieldPos="4" type="string"/>
-
-	<attributes name="stateProv" kind="storage" scope="public" uuid="9304EE46CCAC44C7B7854161785FF735" fieldPos="5" type="string"/>
-
-	<attributes name="country" kind="storage" scope="public" uuid="5A1612B61F044B578787AEBFC931A6F2" fieldPos="6" type="string"/>
-
-	<attributes name="telephone" kind="storage" scope="public" uuid="C3F23D15559F4DFA954DF6DC8E06C423" fieldPos="7" type="string"/>
-
-	<attributes name="url" kind="storage" scope="public" uuid="221B3C69742845A0946F1956E723DC3C" fieldPos="8" type="string"/>
-
-	<attributes name="industry" kind="storage" scope="public" uuid="4C5F13FA0E2A4F6CA896613998670903" fieldPos="9" type="string"/>
-
-	<attributes name="logo" kind="storage" scope="public" uuid="504D94B0E33E4180A8557D468A70B11E" fieldPos="10" type="image"/>
-
-	<attributes name="employees" kind="relatedEntities" scope="public" type="People" reversePath="true" path="employer"/>
-
-</dataClasses>
-
-<dataClasses name="Person" className="Person" collectionName="People" scope="public" uuid="ECE24C567834FD418E627F1F30C32E75" tablePos="2">
-
-	<extraProperties ____objectunic="true" panelColor="#D8D8D8">
-
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
-
-			<position ____objectunic="true" X="319" Y="49"/>
-</panel>
-</extraProperties>
-
-	<attributes name="ID" kind="storage" scope="public" uuid="CC045532B1AEC94AB0B9976CA361A427" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
-
-	<attributes name="firstName" kind="storage" scope="public" uuid="814CFFB704A56248B85A0AA18205A875" fieldPos="2" type="string"/>
-
-	<attributes name="lastName" kind="storage" scope="public" uuid="F88FBF7785C4564BB68C414826C34CFC" fieldPos="3" type="string"/>
-
-	<attributes name="fullName" kind="calculated" scope="public" type="string" scriptKind="javascript">
-
-		<onGet from="guidedModel.Person.fullName.onGet"/>
-
-	</attributes>
-
-	<attributes name="email" kind="storage" scope="public" uuid="CD85D55A8E7154458D11C85405AEC908" fieldPos="4" type="string" autoComplete="true"/>
-
-	<attributes name="salary" kind="storage" scope="public" uuid="8CE9B0F21DA7DF46AA0D6EA1403160CE" fieldPos="5" type="number">
-
-		<defaultFormat format="$###,###.00" presentation="text"/>
-
-	</attributes>
-
-	<attributes name="birthdate" kind="storage" scope="public" uuid="56FF22CDBEB54E43AC1AE452BA16FCF3" fieldPos="6" type="date"/>
-
-	<attributes name="married" kind="storage" scope="public" uuid="435F4932AB06254F8E67473A408F4EE1" fieldPos="10" type="bool"/>
-
-	<attributes name="employer" kind="relatedEntity" scope="public" type="Company" uuid="3F57FA0A086B4E6A90AB8E24944C026E" fieldPos="7" path="Company"/>
-
-	<attributes name="consent" kind="storage" scope="public" uuid="A4B8CEE024134222B736777C04714AB8" fieldPos="13" type="bool"/>
-
-	<attributes name="photo" kind="storage" scope="public" uuid="765A444624F341F187953C7C038DED27" fieldPos="14" type="image"/>
-
-	<attributes name="category" kind="storage" scope="public" uuid="99CA6FDC6E32524FA8E2B85265BD0E76" fieldPos="15" type="string"/>
-
-</dataClasses>
-</EntityModelCatalog>
+﻿{
+	"dbInfo": [
+		{
+			"name": "Widgets",
+			"uuid": "DEB2380315EE8E47AF7052ECFC4FADBC"
+		}
+	],
+	"dataClasses": [
+		{
+			"name": "Company",
+			"className": "Company",
+			"collectionName": "Companies",
+			"scope": "public",
+			"uuid": "2ACA226F4D084D778B0B175C0932CC68",
+			"extraProperties": {
+				"panelColor": "#D88CFF",
+				"__CDATA": "\n\n\t\t\n",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\n\t\t\t\n",
+					"position": {
+						"X": "48",
+						"Y": "29"
+					}
+				}
+			},
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "75CB1845A8454BC5B6803FE7E3505FD2",
+					"unique": true,
+					"autosequence": true,
+					"autogenerate": true,
+					"type": "uuid",
+					"primKey": true
+				},
+				{
+					"name": "name",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "1FEAC29990D54949A34586E5F6835A28",
+					"type": "string"
+				},
+				{
+					"name": "address",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "37840A2B680A463CBF3AD83493D0514B",
+					"type": "string"
+				},
+				{
+					"name": "city",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "4B2CC5394BF544FAAF5EB5CD13053B7A",
+					"type": "string"
+				},
+				{
+					"name": "stateProv",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "9304EE46CCAC44C7B7854161785FF735",
+					"type": "string"
+				},
+				{
+					"name": "country",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "5A1612B61F044B578787AEBFC931A6F2",
+					"type": "string"
+				},
+				{
+					"name": "telephone",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "C3F23D15559F4DFA954DF6DC8E06C423",
+					"type": "string"
+				},
+				{
+					"name": "url",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "221B3C69742845A0946F1956E723DC3C",
+					"type": "string"
+				},
+				{
+					"name": "industry",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "4C5F13FA0E2A4F6CA896613998670903",
+					"type": "string"
+				},
+				{
+					"name": "logo",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "504D94B0E33E4180A8557D468A70B11E",
+					"type": "image"
+				},
+				{
+					"name": "employees",
+					"kind": "relatedEntities",
+					"scope": "public",
+					"type": "People",
+					"reversePath": true,
+					"path": "employer"
+				}
+			]
+		},
+		{
+			"name": "Person",
+			"className": "Person",
+			"collectionName": "People",
+			"scope": "public",
+			"uuid": "ECE24C567834FD418E627F1F30C32E75",
+			"extraProperties": {
+				"panelColor": "#D8D8D8",
+				"__CDATA": "\n\n\t\t\n",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\n\t\t\t\n",
+					"position": {
+						"X": "319",
+						"Y": "49"
+					}
+				}
+			},
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "CC045532B1AEC94AB0B9976CA361A427",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "firstName",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "814CFFB704A56248B85A0AA18205A875",
+					"type": "string"
+				},
+				{
+					"name": "lastName",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "F88FBF7785C4564BB68C414826C34CFC",
+					"type": "string"
+				},
+				{
+					"name": "fullName",
+					"kind": "calculated",
+					"scope": "public",
+					"type": "string",
+					"scriptKind": "javascript",
+					"onGet": [
+						{
+							"from": "guidedModel.Person.fullName.onGet"
+						}
+					]
+				},
+				{
+					"name": "email",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "CD85D55A8E7154458D11C85405AEC908",
+					"type": "string",
+					"autoComplete": true
+				},
+				{
+					"name": "salary",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "8CE9B0F21DA7DF46AA0D6EA1403160CE",
+					"type": "number",
+					"defaultFormat": [
+						{
+							"format": "$###,###.00",
+							"presentation": "text"
+						}
+					]
+				},
+				{
+					"name": "birthdate",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "56FF22CDBEB54E43AC1AE452BA16FCF3",
+					"type": "date",
+					"simpleDate": false
+				},
+				{
+					"name": "married",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "435F4932AB06254F8E67473A408F4EE1",
+					"type": "bool"
+				},
+				{
+					"name": "employer",
+					"kind": "relatedEntity",
+					"scope": "public",
+					"uuid": "3F57FA0A086B4E6A90AB8E24944C026E",
+					"type": "Company",
+					"path": "Company"
+				},
+				{
+					"name": "consent",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "A4B8CEE024134222B736777C04714AB8",
+					"type": "bool"
+				},
+				{
+					"name": "photo",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "765A444624F341F187953C7C038DED27",
+					"type": "image"
+				},
+				{
+					"name": "category",
+					"kind": "storage",
+					"scope": "public",
+					"uuid": "99CA6FDC6E32524FA8E2B85265BD0E76",
+					"type": "string"
+				}
+			]
+		}
+	],
+	"extraProperties": {
+		"model": {
+			"workspaceLeft": 0,
+			"workspaceTop": 0
+		},
+		"classes": {
+			"Company": {
+				"panelColor": "#D88CFF",
+				"__CDATA": "\n\n\t\t\n",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\n\t\t\t\n",
+					"position": {
+						"X": "48",
+						"Y": "29"
+					}
+				}
+			},
+			"Person": {
+				"panelColor": "#D8D8D8",
+				"__CDATA": "\n\n\t\t\n",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": "true",
+					"__CDATA": "\n\n\t\t\t\n",
+					"position": {
+						"X": "319",
+						"Y": "49"
+					}
+				}
+			}
+		},
+		"version": "1"
+	},
+	"toJSON": true
+}
